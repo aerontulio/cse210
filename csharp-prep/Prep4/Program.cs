@@ -14,7 +14,10 @@ class Program
             string valueFromUser = Console.ReadLine();
             inputNumber = int.Parse(valueFromUser);
 
-            numbers.Add(inputNumber);
+            if (inputNumber != 0)
+            {
+                numbers.Add(inputNumber);
+            }
         }
 
         int sum = 0;
