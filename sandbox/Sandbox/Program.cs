@@ -1,26 +1,19 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using System.Transactions;
 
 class Program
 {
     static void Main(string[] args)
-    {  
-        int i = 0;
-        int number = 5;
+    {   
+        Student student1 = new Student("Aeron", "Tulio", "4th", "Psychology", "Freud", 98, 99);
+        student1.introduceSelf();
+        student1.evaluateGrade();
 
-        while (i < 3)
-        {
-            Console.Write("Guess the number from 1 to 10: ");
-            int guess = int.Parse(Console.ReadLine());
-            if (guess == number)
-            {
-                Console.WriteLine("You're right");
-                break;
-            }
-            i++;
-            Console.WriteLine("Try Again");
-        }
-
+        Student s2 = new Student("Aira", "Tulio", "1st", "Nursing", "Dorothea", 97, 98);
+        s2.introduceSelf();
+        s2.evaluateGrade();
     }
+
 } 
